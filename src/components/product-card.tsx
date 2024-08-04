@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Product } from "../types/product";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { AddToCartButton } from "./add-to-cart-btn";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -22,7 +22,7 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="truncate-3-lines">{product.title}</p>
           <p className="py-1 text-sky-600 font-semibold">${product.price}</p>
         </div>
-        <Button>Add to cart</Button>
+        <AddToCartButton product={product} />
       </div>
     </div>
   );

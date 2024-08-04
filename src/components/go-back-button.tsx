@@ -12,7 +12,7 @@ export default function GoBackButton() {
   };
 
   return (
-    <Button color="gray" onClick={handleGoBack}>
+    <Button color="light" onClick={handleGoBack}>
       <ArrowLeft className="mr-2 h-5 w-5" /> Go Back
     </Button>
   );
