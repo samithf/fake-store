@@ -1,9 +1,9 @@
-import { ProductShow } from "@/app/components/product-show";
-import { ProductShowSkeleton } from "@/app/components/product-show-skeleton";
-import { getProduct } from "@/app/db/queries";
+import { ProductShow } from "@/components/product-show";
+import { ProductShowSkeleton } from "@/components/product-show-skeleton";
 import Link from "next/link";
 import { Suspense } from "react";
-import { ArrowLeft, Camera } from "lucide-react";
+import { getProduct } from "@/db/queries";
+import GoBackButton from "@/components/go-back-button";
 
 export interface ProductPageProps {
   params: {
@@ -15,13 +15,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       <div>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1 border px-2  py-1 m-2 shadow-sm hover:shadow-md"
-        >
-          <ArrowLeft size="20" />
-          Back to products
-        </Link>
+        <GoBackButton />
       </div>
       <Suspense fallback={<ProductShowSkeleton />}>
         <ProductShow fetchProduct={() => getProduct(parseInt(params.id))} />
