@@ -9,7 +9,7 @@ export interface ProductShowProps {
 export async function ProductShow({ fetchProduct }: ProductShowProps) {
   const product = await fetchProduct();
   return (
-    <div className="max-w-[600px] mx-auto p-4">
+    <div className="max-w-[700px] mx-auto p-10 bg-white rounded-md">
       <div className="flex justify-center items-center w-full h-[400px] relative my-10">
         <Image src={product.image} alt="" layout="fill" objectFit="contain" />
       </div>

@@ -5,7 +5,7 @@ import { AddToCartButton } from "./add-to-cart-btn";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="w-auto max-h-[400px] bg-white border border-gray-200 rounded-md shadow-sm">
+    <div className="w-auto max-h-[400px] bg-white border border-gray-200 rounded-md">
       <div className="relative w-full h-[200px]">
         <Link href={`products/${product.id}`}>
           <Image
@@ -13,7 +13,7 @@ export function ProductCard({ product }: { product: Product }) {
             alt=""
             layout="fill"
             objectFit="contain"
-            className="p-2"
+            className="p-8"
           />
         </Link>
       </div>
