@@ -14,6 +14,7 @@ export function ProductCard({ product }: { product: Product }) {
             layout="fill"
             objectFit="contain"
             className="p-8"
+            priority
           />
         </Link>
       </div>
